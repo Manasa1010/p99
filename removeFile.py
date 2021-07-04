@@ -41,6 +41,10 @@ def main():
                     if(sec>=get_fileorfolder_age(file_path)):
                         remove_file(file_path)
                         deleted_files+=1
+        else:
+            if sec>=get_fileorfolder_age(source):
+                remove_file(source)
+                deleted_files+=1
     else:
         print("this file does not exsits")
 
